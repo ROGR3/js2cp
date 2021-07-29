@@ -1,14 +1,13 @@
-const { promises: fs } = require('fs');
 const fse = require('fs-extra');
-const readlineSync = require('readline-sync');
 const cppBase = require('./parseString/base/cppBase.js');
 const getFunctionsFromString = require('./parseString/getFunctions.js');
 const getBodyFromString = require('./parseString/getBody.js');
 const getFile = require('./parseString/base/getFile.js');
+const getIncludes = require('./parseString/includes.js');
 
-async function write(f, b, resDir) {
+async function write(i, f, b, resDir) {
   fse
-    .outputFile(`${resDir}`, cppBase(f, b))
+    .outputFile(`${resDir}`, cppBase(i, f, b))
     .then(() => {
       console.log('The file was saved!');
     })
@@ -24,12 +23,11 @@ exports.execute = async function (path) {
     const cppfilePath = cppfileName.includes('/')
       ? 'dist/' + cppfileName.split('/')[cppfileName.split('/').length - 1]
       : 'dist/' + cppfileName;
-    console.log(cppfileName);
-    console.log(cppfilePath);
     let fileString = await getFile(jsfileName);
     let sFunctions = getFunctionsFromString(fileString);
     let sBody = getBodyFromString(fileString);
-    await write(sFunctions, sBody, cppfilePath);
+    let fileIncludes = getIncludes(fileString);
+    await write(fileIncludes, sFunctions, sBody, cppfilePath);
   } catch (e) {
     console.log('e', e);
   }

@@ -4,7 +4,7 @@ function changeConsole(string) {
     let midRes = string.match(/(?<=console.log).+\;|(?<=console.error).+\;/g);
     for (let i = 0; i < midRes.length; ++i) {
       consoleContent[i] = consoleContent[i].replace('(', '').replace(');', '').replace(/,/g, '<< " " <<');
-      midRes[i] = 'cout <<' + consoleContent[i] + '<< endl;';
+      midRes[i] = 'std::cout <<' + consoleContent[i] + '<< std::endl;';
     }
     let oc = -1;
     let res = string.replace(/(?=console.log).+\;|(?=console.error).+\;/g, function (match) {

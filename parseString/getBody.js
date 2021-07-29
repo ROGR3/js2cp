@@ -1,6 +1,5 @@
 const both = require('./both.js');
 const deleteFunctions = require('./smallFunctions/deleteFunctions.js');
-const handleQuotes = require('./smallFunctions/hadlequotes.js');
 
 function getBody(string) {
   let res = both(string);

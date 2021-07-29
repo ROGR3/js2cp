@@ -16,12 +16,18 @@ function functionReturn(string) {
         rets[0].includes('==')
       ) {
         retStatement = 'bool';
-      } else if (/^\d+$/.test(rets[0])) {
+      } else if (
+        /^\d+$/.test(rets[0]) ||
+        rets[0].includes('+') ||
+        rets[0].includes('-') ||
+        rets[0].includes('*') ||
+        rets[0].includes('/')
+      ) {
         retStatement = 'int';
       } else if (rets[0].length == 3) {
         retStatement = 'char';
       } else {
-        retStatement = 'string';
+        retStatement = 'std::string';
       }
     }
     posArr.push(retStatement);

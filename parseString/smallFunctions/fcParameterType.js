@@ -40,7 +40,7 @@ function fcParameterType(string, res) {
               }
             }
           }
-          typesArr.push('string');
+          typesArr.push('std::string');
         }
       } else {
         typesArr.push('not said');

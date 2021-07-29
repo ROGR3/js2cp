@@ -13,7 +13,7 @@ function changeTypes(string, exact) {
     } else if (vars[i].length == 3) {
       vars[i] = 'char';
     } else {
-      vars[i] = 'string';
+      vars[i] = 'std::string';
     }
   }
   return vars[0];

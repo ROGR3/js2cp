@@ -1,6 +1,5 @@
-const cppBase = (functions, intoMain) => {
-  return `#include <iostream>
-using namespace std;
+const cppBase = (includes, functions, intoMain) => {
+  return `${includes}
 
 ${functions}
 
