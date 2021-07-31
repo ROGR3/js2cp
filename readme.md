@@ -2,6 +2,13 @@
 
 A Javascript to C++ "Translator", built from Node.js!
 
+> **PS:** _I know, that you won't read the documentation. So, the only thing u have to do is to_ **USE SEMICOLONS**
+>
+> > > function getSum(a, b) {
+> > > return a + b **;**
+> > > }**;**
+> > > console.log(getSum(12,3))**;**
+
 # Installation
 
 #### Install globally
@@ -65,10 +72,12 @@ This will create a new folder **dist/** In our case **dist/helloWorld.cpp**
 
 # Info
 
-Translator does not support the "frontend technologies", like document.querySelector etc. So please, don't even try it, ir will compile with bugs.
+You have to use semicolons to make it work!
 
-Translator is build for "competetive programming" applications. That means, not so huge file with minimum of prebuild js functions.
+Translator does not support the "frontend technologies", like document.querySelector etc. So please, don't even try it, it will compile with bugs.
 
-PS: js2cp is still under development, so use it wisely.
+JS2CP is build for "competetive programming" applications. That means, not so huge file with minimum of prebuild js functions.
 
-PSS: If you have any questions, complaints please send them to robingrundel@seznam.cz
+JS2CP is still under development, so use it wisely.
+
+PSS: If you have any questions or complaints, please send them to robingrundel@seznam.cz

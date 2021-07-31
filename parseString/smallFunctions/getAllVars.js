@@ -1,7 +1,7 @@
 function getAllVars(string) {
   if (string.match(/(?<= = ).+?\s/g)) {
     let vars = string
-      .match(/(?<=let ).+?\s/g)
+      .match(/(?<=let ).+?\s|(?<=var ).+?\s|(?<=const ).+?\s/g)
       .toString()
       .replace(/\r|;| /g, '')
       .split(',');

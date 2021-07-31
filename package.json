@@ -1,6 +1,6 @@
 {
   "name": "js2cp",
-  "version": "1.0.2",
+  "version": "1.0.11",
   "description": "",
   "main": "./app.js",
   "bin": {
@@ -22,7 +22,9 @@
   "author": "borecjeborec1",
   "license": "ISC",
   "dependencies": {
-    "fs-extra": "^10.0.0"
+    "colors": "^1.4.0",
+    "fs-extra": "^10.0.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {},
   "repository": {

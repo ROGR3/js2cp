@@ -43,6 +43,8 @@ function changeTypes(string) {
           vars[i] = 'std::vector<float>';
         } else if (/^\d+$/.test(vars[i].replace(/]|,|\./, '').replace('[', ''))) {
           vars[i] = 'std::vector<int>';
+        } else {
+          vars[i] = 'std::vector<int>';
         }
       }
     }
@@ -61,7 +63,6 @@ function changeTypes(string) {
     });
     let arrOc = -1;
 
-    res = res.replace(/arr/g, '');
     return res;
   }
   return string;
