@@ -24,13 +24,15 @@ Let's assume u have your extra powerful hello world program.
 
 With insane "Hello World!" code inside
 
-    console.log("Hello World!")
+```Javascript
+console.log("Hello World!")
+```
 
 #### How to translate
 
 ```Javascript
-const js2cp = require("js2cp")
-js2cp.translate("./helloWorld.js")
+    const js2cp = require("js2cp")
+    js2cp.translate("./helloWorld.js")
 ```
 
 
