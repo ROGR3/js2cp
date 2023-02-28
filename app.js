@@ -6,7 +6,7 @@ function translate(_path) {
   const code = fs.readFileSync(_path, "utf-8")
   const ast = acorn.parse(code);
   const res = generateWholeCode(ast)
-  fs.writeFileSync(_path + ".cpp", res)
+  fs.writeFileSync(_path.replace(".js", ".cpp"), res)
 }
 
 module.exports = { translate }
