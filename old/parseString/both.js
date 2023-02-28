@@ -8,12 +8,14 @@ const fixMathRandom = require('./math/random.js');
 const pop = require('./arrayFunctions/pop.js');
 const push = require('./arrayFunctions/push.js');
 const changeLength = require('./arrayFunctions/length.js');
+const changeForEach = require('./arrayFunctions/forEach.js');
 
 function getAll(string) {
   let res = toString(string);
   res = changeTypes(res);
   res = changeConsole(res);
   res = changeTripleEqual(res);
+  res = changeForEach(res);
   res = handleQuotes(res);
   res = fixMathRandom(res);
   res = pop(res);

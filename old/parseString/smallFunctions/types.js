@@ -42,9 +42,17 @@ function changeTypes(string) {
         } else if (/^\d+$/.test(vars[i].replace(/]|,|\./, '').replace('[', '')) && vars[i].includes('.')) {
           vars[i] = 'std::vector<float>';
         } else if (/^\d+$/.test(vars[i].replace(/]|,|\./, '').replace('[', ''))) {
-          vars[i] = 'std::vector<int>';
+          let c;
+          for (let j = 0; j < 8; ++j) {
+            if (/^\d+$/.test(vars[i][j])) c++;
+          }
+          if (c >= 7) {
+            vars[i] = 'std::vector<long long int>';
+          } else {
+            vars[i] = 'std::vector<int>';
+          }
         } else {
-          vars[i] = 'std::vector<int>';
+          vars[i] = 'std::vector<long long int>';
         }
       }
     }

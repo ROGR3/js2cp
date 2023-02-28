@@ -6,7 +6,7 @@ ${functions}
 int main(){
   ${intoMain}
   // If you want to pause the program at the end just uncomment line below
-  // system("pause>0")
+  // system("pause>0");
 };
 `;
 };

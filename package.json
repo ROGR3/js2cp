@@ -1,36 +1,23 @@
 {
-  "name": "js2cp",
-  "version": "1.0.11",
-  "description": "",
-  "main": "./app.js",
-  "bin": {
-    "js2cp": "bin/index.js"
+  "dependencies": {
+    "acorn": "^8.8.2"
   },
+  "name": "js2cp",
+  "description": "A Javascript to C++ \"Translator\", built from Node.js!",
+  "version": "2.0.0",
+  "main": "index.js",
   "directories": {
-    "test": "test"
+    "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node index.js"
   },
-  "keywords": [
-    "javascript",
-    "c++",
-    "translator",
-    "compiler",
-    "js2cp"
-  ],
-  "author": "borecjeborec1",
-  "license": "ISC",
-  "dependencies": {
-    "colors": "^1.4.0",
-    "fs-extra": "^10.0.0",
-    "path": "^0.12.7"
-  },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/borecjeborec1/js2cp.git"
   },
+  "author": "borecjeborec1",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/borecjeborec1/js2cp/issues"
   },
